@@ -35,6 +35,7 @@ NSString *lowercaseStringPath = @keypath(NSString.new, lowercaseString);
  * refactoring, such that changing the name of the property will also update any
  * uses of \@keypath.
  */
+ #ifndef keypath
 #define keypath(...) \
     metamacro_if_eq(1, metamacro_argcount(__VA_ARGS__))(keypath1(__VA_ARGS__))(keypath2(__VA_ARGS__))
 
@@ -65,4 +66,5 @@ NSString *lowercaseStringPath = @keypath(NSString.new, lowercaseString);
 #define collectionKeypath3(PATH, COLLECTION_OBJECT, COLLECTION_PATH) ([[NSString stringWithFormat:@"%s.%s",keypath(PATH), keypath(COLLECTION_OBJECT, COLLECTION_PATH)] UTF8String])
 
 #define collectionKeypath4(OBJ, PATH, COLLECTION_OBJECT, COLLECTION_PATH) ([[NSString stringWithFormat:@"%s.%s",keypath(OBJ, PATH), keypath(COLLECTION_OBJECT, COLLECTION_PATH)] UTF8String])
+#endif
 
