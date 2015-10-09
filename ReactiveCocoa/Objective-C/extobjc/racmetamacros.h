@@ -6,8 +6,8 @@
  * Released under the MIT license
  */
 
-#ifndef EXTC_METAMACROS_H
-#define EXTC_METAMACROS_H
+#ifndef RACEXTC_METAMACROS_H
+#define RACEXTC_METAMACROS_H
 
 /**
  * Executes one or more expressions (which may have a void type, such as a call
