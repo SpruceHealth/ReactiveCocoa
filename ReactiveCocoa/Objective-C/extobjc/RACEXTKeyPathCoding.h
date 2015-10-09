@@ -1,5 +1,5 @@
 //
-//  EXTKeyPathCoding.h
+//  RACEXTKeyPathCoding.h
 //  extobjc
 //
 //  Created by Justin Spahr-Summers on 19.06.12.
@@ -8,7 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "metamacros.h"
+#import "racmetamacros.h"
 
 /**
  * \@keypath allows compile-time verification of key paths. Given a real object
@@ -49,10 +49,10 @@ NSString *lowercaseStringPath = @keypath(NSString.new, lowercaseString);
  * receiver, collection object receiver and related keypaths:
  *
  * @code
- 
+
  NSString *employessFirstNamePath = @collectionKeypath(department.employees, Employee.new, firstName)
  // => @"employees.firstName"
- 
+
  NSString *employessFirstNamePath = @collectionKeypath(Department.new, employees, Employee.new, firstName)
  // => @"employees.firstName"
 
@@ -65,4 +65,3 @@ NSString *lowercaseStringPath = @keypath(NSString.new, lowercaseString);
 #define collectionKeypath3(PATH, COLLECTION_OBJECT, COLLECTION_PATH) ([[NSString stringWithFormat:@"%s.%s",keypath(PATH), keypath(COLLECTION_OBJECT, COLLECTION_PATH)] UTF8String])
 
 #define collectionKeypath4(OBJ, PATH, COLLECTION_OBJECT, COLLECTION_PATH) ([[NSString stringWithFormat:@"%s.%s",keypath(OBJ, PATH), keypath(COLLECTION_OBJECT, COLLECTION_PATH)] UTF8String])
-

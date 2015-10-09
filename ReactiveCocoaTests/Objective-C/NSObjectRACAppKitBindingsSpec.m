@@ -11,7 +11,7 @@
 
 #import "RACChannelExamples.h"
 
-#import "EXTKeyPathCoding.h"
+#import "RACEXTKeyPathCoding.h"
 #import "NSObject+RACAppKitBindings.h"
 
 QuickSpecBegin(NSObjectRACAppKitBindingsSpec)

@@ -76,7 +76,7 @@ __weak id weakSelf = self;
 ```
 
 Or, after importing the included
-[EXTScope.h](https://github.com/jspahrsummers/libextobjc/blob/master/extobjc/EXTScope.h)
+[EXTScope.h](https://github.com/jspahrsummers/libextobjc/blob/master/extobjc/RACEXTScope.h)
 header:
 
 ```objc

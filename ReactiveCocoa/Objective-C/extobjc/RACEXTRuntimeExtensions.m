@@ -1,5 +1,5 @@
 //
-//  EXTRuntimeExtensions.m
+//  RACEXTRuntimeExtensions.m
 //  extobjc
 //
 //  Created by Justin Spahr-Summers on 2011-03-05.
@@ -7,7 +7,7 @@
 //  Released under the MIT license.
 //
 
-#import "EXTRuntimeExtensions.h"
+#import "RACEXTRuntimeExtensions.h"
 
 #import <ctype.h>
 #import <Foundation/Foundation.h>
